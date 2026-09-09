@@ -1,111 +1,111 @@
 # 🎮 **PokemonMonster**  
-**A WPF project in C# inspired by the Pokemon battle system**  
+**Un projet WPF en C# inspiré du système de combat Pokemon**  
 
-## 📜 **Project Description**  
-**PokemonMonster** is an application developed in **C#** using **WPF** (Windows Presentation Foundation). The goal is to recreate, in a simplified version, the **Pokemon battle system**, with key features to make the experience interactive and enjoyable.  
+## 📜 **Description du projet**  
+**PokemonMonster** est une application développée en **C#** avec **WPF** (Windows Presentation Foundation). L'objectif est de recréer, dans une version simplifiée, le **système de combat Pokemon**, avec des fonctionnalités clés pour rendre l'expérience interactive et agréable.  
 
 ---
 
-## 🎥 **Projet Demonstration**
+## 🎥 **Démonstration du projet**
 
-You can see a video demonstration of the project here :
+Vous pouvez voir une vidéo de démonstration du projet ici :
 [![Watch the video](https://img.youtube.com/vi/05NEGC9uOxA/0.jpg)](https://www.youtube.com/embed/05NEGC9uOxA)
 
 --- 
 
-### 🚪 **Main Features**  
+### 🚪 **Fonctionnalités principales**  
 
-1. **Authentication**  
-   - The project starts with a **login page** where users can authenticate or register.  
+1. **Authentification**  
+   - Le projet démarre par une **page de connexion** où les utilisateurs peuvent s'authentifier ou s'inscrire.  
 
-2. **Pokemon Catalog**  
-   - Access a list of the **first 151 Pokemon**.  
-   - Every Pokemon is playable!  
-   - View their stats and associated abilities.  
+2. **Catalogue de Pokemon**  
+   - Accédez à une liste des **151 premiers Pokemon**.  
+   - Chaque Pokemon est jouable !  
+   - Consultez leurs statistiques et capacités associées.  
 
-3. **Abilities Catalog**  
-   - Browse through a list of available **attacks (or abilities)**.  
-   - View details for each ability and the Pokemon that can use them.  
+3. **Catalogue de capacités**  
+   - Parcourez une liste des **attaques (ou capacités)** disponibles.  
+   - Consultez le détail de chaque capacité et les Pokemon pouvant l'utiliser.  
 
-4. **Battle System**  
-   - Choose a Pokemon by clicking **"Play"**.  
-   - Face randomly selected opponents.  
-   - **Dynamic progression**: After three victories, opponents receive a **damage or health bonus**, making the game more challenging.  
+4. **Système de combat**  
+   - Choisissez un Pokemon en cliquant sur **« Play »**.  
+   - Affrontez des adversaires sélectionnés aléatoirement.  
+   - **Progression dynamique** : après trois victoires, les adversaires reçoivent un **bonus de dégâts ou de vie**, rendant le jeu plus difficile.  
 
-5. **Simple and Intuitive Navigation**  
-   - A **navigation bar** at the top of the screen allows easy switching between pages:  
-     - Pokemon list  
-     - Abilities list  
-     - Battle page  
-
----  
-
-### 🧩 **Architecture and MVVM Model**  
-The project follows the **MVVM (Model-View-ViewModel)** pattern in most cases. However, some exceptions, such as **navigation logic**, are directly integrated into the views for practicality.  
+5. **Navigation simple et intuitive**  
+   - Une **barre de navigation** en haut de l'écran permet de basculer facilement entre les pages :  
+     - Liste des Pokemon  
+     - Liste des capacités  
+     - Page de combat  
 
 ---  
 
-## 🚀 **Installation and Setup**  
+### 🧩 **Architecture et modèle MVVM**  
+Le projet suit le patron **MVVM (Model-View-ViewModel)** dans la plupart des cas. Cependant, certaines exceptions, comme la **logique de navigation**, sont directement intégrées dans les vues par souci de simplicité.  
 
-### **Prerequisites**  
-- **Git** (to clone the repository)  
+---  
+
+## 🚀 **Installation et mise en route**  
+
+### **Prérequis**  
+- **Git** (pour cloner le dépôt)  
 - **C#**  
-- **SQL Server** (for the database)  
-- An **IDE compatible with C#**, such as **Visual Studio**  
+- **SQL Server** (pour la base de données)  
+- Un **IDE compatible avec C#**, comme **Visual Studio**  
 
 ---  
 
-### **Installation Steps**  
+### **Étapes d'installation**  
 
-1. **Create the Database**  
-   - Create a local database named **`ExerciceMonster`**.  
-   - **Tables and data** will be automatically generated when launching the project, so manual setup is not required.  
+1. **Créer la base de données**  
+   - Créer une base de données locale nommée **`ExerciceMonster`**.  
+   - Les **tables et données** seront générées automatiquement au lancement du projet, aucune configuration manuelle n'est nécessaire.  
 
-2. **Clone the Repository**  
-   - Clone the project to your machine using a terminal:  
+2. **Cloner le dépôt**  
+   - Cloner le projet sur votre machine via un terminal :  
      ```bash
      git clone https://github.com/fl-hugo/PokemonMonster
      ```  
 
-3. **Configure the Database Connection**  
-   - Open the project in **Visual Studio** or an equivalent IDE.  
-   - Modify the `RepositoryBase.cs` file located in the **Repositories** folder.  
-   - Update the **`_connectionString`** value to match your local database. Example for **SQLEXPRESS**:  
+3. **Configurer la connexion à la base de données**  
+   - Ouvrir le projet dans **Visual Studio** ou un IDE équivalent.  
+   - Modifier le fichier `RepositoryBase.cs` situé dans le dossier **Repositories**.  
+   - Mettre à jour la valeur **`_connectionString`** pour qu'elle corresponde à votre base locale. Exemple pour **SQLEXPRESS** :  
      ```csharp
      _connectionString = "Server=localhost\\SQLEXPRESS; Database=ExerciceMonster; Trusted_Connection=True; TrustServerCertificate=True;";
      ```  
 
-4. **Run the Project**  
-   - Compile and run the project from your IDE.  
-   - Wait for the **home page** to appear. You’re ready to play! 🎉  
+4. **Lancer le projet**  
+   - Compiler et lancer le projet depuis votre IDE.  
+   - Attendre l'apparition de la **page d'accueil**. Vous êtes prêt à jouer ! 🎉  
 
 ---  
 
-### **Note**  
-I attempted to implement a dynamic configuration page (`DatabaseConnectionView.xaml`) to facilitate database connection setup without modifying the source code. However, this feature is not yet functional in the current version of the project.  
+### **Remarque**  
+J'ai tenté de mettre en place une page de configuration dynamique (`DatabaseConnectionView.xaml`) pour faciliter la configuration de la connexion à la base de données sans modifier le code source. Cependant, cette fonctionnalité n'est pas encore opérationnelle dans la version actuelle du projet.  
 
 ---  
 
-## 🛠️ **Technologies Used**  
-- **Language**: C#  
-- **Framework**: WPF  
-- **Database**: SQL Server  
-- **Architecture**: MVVM  
+## 🛠️ **Technologies utilisées**  
+- **Langage** : C#  
+- **Framework** : WPF  
+- **Base de données** : SQL Server  
+- **Architecture** : MVVM  
 
 ---  
 
-## 🎯 **Future Improvements**  
-- Finalize the dynamic configuration of the database connection.  
-- Implement a progress-saving system.  
-- Optimize the user interface for a better experience.  
-- Add more complexity to the battle system (spell effects like burn, Pokemon and ability types, monster stats).  
-- Improve the application's design by adding fluidity and animations.  
+## 🎯 **Améliorations futures**  
+- Finaliser la configuration dynamique de la connexion à la base de données.  
+- Mettre en place un système de sauvegarde de la progression.  
+- Optimiser l'interface utilisateur pour une meilleure expérience.  
+- Ajouter davantage de complexité au système de combat (effets de sorts comme la brûlure, types de Pokemon et de capacités, statistiques des monstres).  
+- Améliorer le design de l'application en ajoutant fluidité et animations.  
 
 ---  
 
-## 🧑‍💻 **Author**  
-Developed by **Flandrin Hugo** as part of a learning project at **Ynov Lyon**.  
+## 🧑‍💻 **Auteur**  
+Développé par **Flandrin Hugo** dans le cadre d'un projet pédagogique à **Ynov Lyon**.  
 
 ---  
 
-### 🚀 **Enjoy the Game!**  
+### 🚀 **Profitez bien du jeu !**  
